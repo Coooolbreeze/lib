@@ -57,9 +57,9 @@
     <script src="/lib/regexp/regexp.js"></script>
 ### 使用
     regexp.check(rule, string);
+    #验证通过将返回true，否则返回false
 ### 也可验证长度
     regexp.check(rule[min,max], string);
-    #验证通过将返回true，否则返回false
 ### 例 5-10个数字
     regexp.check('number[5,10]', '012345')  #返回true
 ### 内置规则如下
