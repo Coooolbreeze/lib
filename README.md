@@ -56,8 +56,7 @@
 ### 引入js
     <script src="/lib/regexp/regexp.js"></script>
 ### 使用
-    regexp.check(rule, string);
-    #验证通过将返回true，否则返回false
+    regexp.check(rule, string);  #验证通过将返回true，否则返回false
 ### 也可验证长度
     regexp.check(rule[min,max], string);
 ### 例 5-10个数字
@@ -97,7 +96,7 @@
     // (?=.*\d)断言，该位置后肯定有数字
     // (?![0-9]+$)断言，该位置后不全是数字
     comPass: /^[a-zA-Z](?=.*\d)[_0-9a-zA-Z]{7,17}$/,
-### 可自行在js文件中添加，或在调用check方法前临时添加一个规则，如
+### 可自行在js文件中添加，或在调用check方法前临时添加规则，如
     regexp.set({
         nonzero: /^[1-9]*$/
     });
