@@ -3,22 +3,22 @@
 ## linkage 城市四级联动
 ### 使用方法：
 + 引入css文件
-  <link rel="stylesheet" href="/lib/linkage/city-linkage.css">
++ <link rel="stylesheet" href="/lib/linkage/city-linkage.css">
 + 引入js文件
-  <script src="/lib/linkage/city-linkage.js"></script>
++ <script src="/lib/linkage/city-linkage.js"></script>
 + 在需要的位置放置一个id为city-linkage的div
-<div id="city-linkage"></div>
++ <div id="city-linkage"></div>
 + 使用cityLinkage
-cityLinkage();
++ cityLinkage();
 + 可传入默认城市信息
-cityLinkage({
-  province: '安徽省',
-  city: '合肥市',
-  county: '包河区',
-  street: '望湖街道'
-});
++ cityLinkage({
++   province: '安徽省',
++   city: '合肥市',
++   county: '包河区',
++   street: '望湖街道'
++ });
 + 获取选中的城市信息
-var data = cityLinkage('getData');
++ var data = cityLinkage('getData');
 
 paginate 分页
 引入css文件
