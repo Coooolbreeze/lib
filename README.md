@@ -1,23 +1,23 @@
 # lib 基于jQuery的插件，需先引入jQuery
 
-linkage 城市四级联动
-使用方法：
-引入css文件
+## linkage 城市四级联动
+### 使用方法：
++ 引入css文件
 <link rel="stylesheet" href="/lib/linkage/city-linkage.css">
-引入js文件
++ 引入js文件
 <script src="/lib/linkage/city-linkage.js"></script>
-在需要的位置放置一个id为city-linkage的div
++ 在需要的位置放置一个id为city-linkage的div
 <div id="city-linkage"></div>
-使用cityLinkage
++ 使用cityLinkage
 cityLinkage();
-可传入默认城市信息
++ 可传入默认城市信息
 cityLinkage({
   province: '安徽省',
   city: '合肥市',
   county: '包河区',
   street: '望湖街道'
 });
-获取选中的城市信息
++ 获取选中的城市信息
 var data = cityLinkage('getData');
 
 paginate 分页
