@@ -3,9 +3,9 @@
 ## linkage 城市四级联动
 ### 使用方法：
 + 引入css文件
-<link rel="stylesheet" href="/lib/linkage/city-linkage.css">
+  <link rel="stylesheet" href="/lib/linkage/city-linkage.css">
 + 引入js文件
-<script src="/lib/linkage/city-linkage.js"></script>
+  <script src="/lib/linkage/city-linkage.js"></script>
 + 在需要的位置放置一个id为city-linkage的div
 <div id="city-linkage"></div>
 + 使用cityLinkage
