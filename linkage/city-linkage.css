@@ -1,0 +1,17 @@
+#city-linkage select {
+    width: 180px;
+    height: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    color: #333;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+    padding-right: 14px;
+}
+
+#city-linkage select::-ms-expand {
+    display: none;
+}
