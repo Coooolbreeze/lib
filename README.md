@@ -2,67 +2,66 @@
 
 ## linkage 城市四级联动
 ### 引入css文件
-+ <link rel="stylesheet" href="/lib/linkage/city-linkage.css">
+    <link rel="stylesheet" href="/lib/linkage/city-linkage.css">
 ### 引入js文件
-+ <script src="/lib/linkage/city-linkage.js"></script>
+    <script src="/lib/linkage/city-linkage.js"></script>
 ### 在需要的位置放置一个id为city-linkage的div
-+ <div id="city-linkage"></div>
+    <div id="city-linkage"></div>
 ### 使用cityLinkage
-+ cityLinkage();
+    cityLinkage();
 ### 可传入默认城市信息
-+ cityLinkage({
-+   province: '安徽省',
-+   city: '合肥市',
-+   county: '包河区',
-+   street: '望湖街道'
-+ });
+    cityLinkage({
+        province: '安徽省',
+        city: '合肥市',
+        county: '包河区',
+        street: '望湖街道'
+    });
 ### 获取选中的城市信息
-+ var data = cityLinkage('getData');
+    var data = cityLinkage('getData');
 
 ## paginate 分页
 ### 引入css文件
-+ <link rel="stylesheet" href="/lib/paginate/paginate.css">
+    <link rel="stylesheet" href="/lib/paginate/paginate.css">
 ### 引入js文件
-+ <script src="/lib/paginate/paginate.js"></script>
+    <script src="/lib/paginate/paginate.js"></script>
 ### 在需要的位置放置一个id为paginate的div
-+ <div id="paginate"></div>
+    <div id="paginate"></div>
 ### 使用paginate
-+ var paginate = paginate();
-+ paginate({
-+   page: 1,    #当前页
-+   limit: 10,  #每页条数
-+   count: 100, #总条数
-+   callback: function(currentPage){
-+    #拿到当前页数后发送ajax请求数据
-+    #请求数据完成后重新渲染
-+     paginate(true)
-+   }
-+ });
+    var paginate = paginate();
+    paginate({
+        page: 1,    #当前页
+        limit: 10,  #每页条数
+        count: 100, #总条数
+        callback: function(currentPage){
+        #拿到当前页数后发送ajax请求数据
+        #请求数据完成后重新渲染
+        paginate(true)
+    });
 ### 如果一个页面中多个地方需要用到分页，可自定义id，后传人需要id名
-+ <div id="paginate1"></div>
-+ <div id="paginate2"></div>
+    <div id="paginate1"></div>
+    <div id="paginate2"></div>
 
-+ var paginate1 = paginate();
-+ paginate1({
-+   element: '#paginate1'
-+   ...
-+ });
-+ var paginate2 = paginate();
-+ paginate2({
-+   element: '#paginate2'
-+   ...
-+ });
+    var paginate1 = paginate();
+    paginate1({
+       element: '#paginate1'
+       ...
+     });
+     var paginate2 = paginate();
+     paginate2({
+       element: '#paginate2'
+       ...
+     });
 
 ## regexp 正则验证
 ### 引入js
-+ <script src="/lib/regexp/regexp.js"></script>
+    <script src="/lib/regexp/regexp.js"></script>
 ### 使用
-+ regexp.check(rule, string);
+    regexp.check(rule, string);
 ### 也可验证长度
-+ regexp.check(rule[min,max], string);
-+ 验证通过将返回true，否则返回false
+    regexp.check(rule[min,max], string);
+    #验证通过将返回true，否则返回false
 ### 例 5-10个数字
-+ regexp.check('number[5,10]', '012345')  #返回true
+    regexp.check('number[5,10]', '012345')  #返回true
 ### 内置规则如下
     // 数字
     number: /^[0-9]*$/,
@@ -99,7 +98,7 @@
     // (?![0-9]+$)断言，该位置后不全是数字
     comPass: /^[a-zA-Z](?=.*\d)[_0-9a-zA-Z]{7,17}$/,
 ### 可自行在js文件中添加，或在调用check方法前临时添加一个规则，如
-+ regexp.set({
-+   nonzero: /^[1-9]*$/
-+ });
-+ regexp.check('nonzero[5,10]', '012345') #返回false
+    regexp.set({
+        nonzero: /^[1-9]*$/
+    });
+    regexp.check('nonzero[5,10]', '012345') #返回false
